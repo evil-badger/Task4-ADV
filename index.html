@@ -11,8 +11,8 @@
     <div class="article">
         <p class="universe starColor">Массивы. Это слово вызывает флешбеки из моего прошлого. <br>С ними всегда было сложно. <br>Абстракция, которую тяжело осознать с точностью до винтика.<br>Я справлюсь.</p>
         <div class="grid">
-            <button class="myButton" onclick="arrType()">Шаблон</button>
-            <button class="myButton" onclick="empty()">Шаблон</button>
+            <button class="myButton" onclick="arrType()">1.Типы элементов массива</button>
+            <button class="myButton" onclick="random()">2.Ввод числа, генерация массива, обработка массива</button>
             <button class="myButton" onclick="empty()">Шаблон</button>
             <button class="myButton" onclick="empty()">Шаблон</button>
             <button class="myButton" onclick="empty()">Шаблон</button>
@@ -33,6 +33,27 @@
                         console.log(typeof(arr[i]));
                     }
             }
+        }
+
+        function random(){
+            let digit=prompt("Введите число");
+            let number=parseInt(digit);
+            console.log(number);
+            
+            let arr=[];
+            for(let i=0;i<number;i++){
+                arr[i]=Math.floor(Math.random()*11);
+            }
+            console.log(arr);
+
+            let arrNew=[...arr];
+            for(let i=0;i<arrNew.length;i++){
+                if(i%3==0&&i!=0){
+                    arrNew[i]*=3;
+                    continue;
+                }
+            }
+            console.log(arrNew);
         }
     </script>
 </body>
