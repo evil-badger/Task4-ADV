@@ -11,7 +11,7 @@
     <div class="article">
         <p class="universe starColor">Массивы. Это слово вызывает флешбеки из моего прошлого. <br>С ними всегда было сложно. <br>Абстракция, которую тяжело осознать с точностью до винтика.<br>Я справлюсь.</p>
         <div class="grid">
-            <button class="myButton" onclick="empty()">Шаблон</button>
+            <button class="myButton" onclick="arrType()">Шаблон</button>
             <button class="myButton" onclick="empty()">Шаблон</button>
             <button class="myButton" onclick="empty()">Шаблон</button>
             <button class="myButton" onclick="empty()">Шаблон</button>
@@ -21,7 +21,19 @@
     </div>
 
     <script>
-      
+        function arrType(){
+            let arr=['455',87.15,true,undefined,7,null,'false',[],{}];
+            for(let i=0;i<arr.length;i++){
+                    if(typeof(arr[i])=="number"){
+                        arr[i]+=3;
+                        console.log(arr[i]+" "+typeof(arr[i]));
+                        continue;
+                    }
+                    else {
+                        console.log(typeof(arr[i]));
+                    }
+            }
+        }
     </script>
 </body>
 </html>
