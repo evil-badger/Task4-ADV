@@ -13,10 +13,7 @@
         <div class="grid">
             <button class="myButton" onclick="arrType()">1.Типы элементов массива</button>
             <button class="myButton" onclick="random()">2.Ввод числа, генерация массива, обработка массива</button>
-            <button class="myButton" onclick="empty()">Шаблон</button>
-            <button class="myButton" onclick="empty()">Шаблон</button>
-            <button class="myButton" onclick="empty()">Шаблон</button>
-            <button class="myButton" onclick="empty()">Шаблон</button>
+            <button class="myButton" onclick="average()">3.Среднее значение</button>
         </div>
     </div>
 
@@ -55,6 +52,37 @@
             }
             console.log(arrNew);
         }
+
+        function average(){
+            let student1 = {
+                firstName: 'Ivan',
+                lastName: 'Shwets',
+                mark:100
+            };
+            console.log(student1);
+
+            let student2={...student1};
+            student2.mark=85;
+            console.log(student2);
+
+            let student3 = Object.assign({}, student1);
+            student3.mark=68;
+            console.log(student3);
+
+            let array=[student1,student2,student3];
+            let average=(array.reduce(function(sum, current) { return sum + current.mark; }, 0))/array.length;
+            console.log(`Среднее значение ${parseInt(average)}`);
+
+            console.log(student1.mark);
+            console.log(student2.mark);
+            console.log(student3.mark);
+
+            for (let key in student1) {
+                console.log(key, student1[key]);
+            }
+
+        }
+    
     </script>
 </body>
 </html>
